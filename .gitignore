@@ -1,0 +1,10 @@
+node_moduels
+./node_modules
+package-lock.json
+./package-lock.json
+package.json
+./package.json
+tailwind.config.js
+./tailwind.config.js
+./css/input.css
+css/input.css

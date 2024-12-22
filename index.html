@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/output.css" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>موارد الشرق الأوسط</title>
+  </head>
+  <body class="bg-green-50 font-arabic">
+    <!-- Navbar -->
+    <nav class="m-4 fixed left-0 right-0 z-[9999]">
+      <!-- الصف العلوي -->
+      <div
+        class="gradient-bg px-4 py-2 flex flex-row-reverse justify-between items-center rounded-2xl"
+      >
+        <!-- الازرار العلوية -->
+
+        <div
+          class="flex items-center justify-between gap-x-3 flex-row-reverse w-full"
+        >
+          <div
+            class="ms-auto text-white border-2 border-white rounded-full h-7 w-7 flex items-center justify-center group hover:border-black transition-all duration-200"
+          >
+            <a href="https://x.com/mertcomsa" target="_blank"
+              ><i
+                class="fa-brands fa-x-twitter transition-all duration-200 group-hover:text-black"
+              ></i
+            ></a>
+          </div>
+
+          <!-- اختيار اللغة -->
+          <div class="relative">
+            <select
+              class="bg-transparent text-white border px-2 rounded-xl focus:outline-none cursor-pointer"
+            >
+              <option class="text-black">العربية</option>
+              <option class="text-black">English</option>
+            </select>
+          </div>
+          <!-- v-border -->
+          <div class="border border-[#c4e4a5] h-8 hidden md:block"></div>
+          <!-- زر تحدث معنا -->
+          <button
+            class="bg-white items-center text-mein-grun font-semibold px-4 py-2 rounded-xl hover:bg-gray-100 transition hidden md:flex"
+          >
+            تحدث معنا الآن
+            <div class="border-r-2 border-mein-grun mx-2 h-6"></div>
+            <i class="fa-solid fa-pencil"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- الصف السفلي -->
+
+      <div
+        class="py-2 px-2 backdrop-saturate-200 backdrop-blur-2xl bg-opacity-80 border-white/80 w-full max-w-full bg-white text-white md:py-0 md:px-0 rounded-2xl border-0 flex justify-between items-center relative"
+      >
+        <!-- زر الدخول وطلب التوظيف -->
+        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+          <button
+            class="border border-mein-grun text-mein-grun font-semibold px-2 py-2 rounded-xl hover:bg-teal-50 transition"
+          >
+            الدخول على النظام
+          </button>
+          <button
+            class="gradient-bg-button text-white font-semibold px-2 py-2 rounded-lg hover:bg-teal-600 transition hidden md:block"
+          >
+            طلب التوظيف للمنشآت
+          </button>
+        </div>
+
+        <!-- روابط القائمة -->
+
+        <div class="hidden lg:block">
+          <ul
+            class="mb-4 mt-2 flex flex-col lg:mb-0 lg:mt-0 lg:flex-row-reverse lg:items-center text-mein-grun"
+          >
+            <a aria-current="page" class="active" href="#"
+              ><div>
+                <p
+                  class="block antialiased text-base leading-relaxed text-inherit bg-[#F2F2F2] px-4 py-5 font-bold"
+                >
+                  الرئيسية
+                </p>
+                <div
+                  class="h-2 rounded w-full bg-gradient-to-r from-mein-grun via-[#bbe1a6] to-[#c4e4a5]"
+                ></div></div></a
+            ><a href="#easy"
+              ><div>
+                <p
+                  class="block antialiased text-base leading-relaxed text-inherit bg-transparent px-4 py-6 font-bold"
+                >
+                  سهولة الوصول
+                </p>
+              </div></a
+            ><a href="#prices"
+              ><div>
+                <p
+                  class="block antialiased text-base leading-relaxed text-inherit bg-transparent px-4 py-6 font-bold"
+                >
+                  أسعار الخدمات
+                </p>
+              </div></a
+            ><a class="" href="#questions"
+              ><div>
+                <p
+                  class="block antialiased text-base leading-relaxed text-inherit false px-4 py-5 font-bold"
+                >
+                  الأسئلة الشائعة
+                </p>
+              </div></a
+            ><a class="" href="#contact"
+              ><div>
+                <p
+                  class="block antialiased text-base leading-relaxed text-inherit false px-4 py-5 font-bold"
+                >
+                  إتصل بنا
+                </p>
+              </div></a
+            >
+          </ul>
+        </div>
+
+        <!-- زر البرجر للشاشات الصغيرة -->
+        <button
+          id="burgerButton"
+          class="md:hidden text-teal-500 focus:outline-none"
+          onclick="toggleMenu()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <!-- الشعار -->
+        <div class="hidden md:block">
+          <img
+            src="media/logo.png"
+            alt="Middle East Resources Logo"
+            class="h-12"
+          />
+        </div>
+      </div>
+
+      <!-- القائمة للموبايل -->
+      <div 
+      id="dropdownMenu"
+      class=" bg-white  justify-center w-1/2 ml-auto overflow-hidden hidden rounded-3xl" >
+        <div class="text-center">
+          <ul
+            class="mb-4 mt-2 flex flex-col w-full lg:mb-0 lg:mt-0 lg:flex-row lg:items-center text-mein-grun"
+          >
+            <a aria-current="page" class="active" href="#"
+              ><div>
+                <p
+                  class="block antialiased   text-base leading-relaxed text-inherit bg-[#F2F2F2] px-4 py-5 font-bold"
+                >
+                  الرئيسية
+                </p>
+                <div
+                  class="h-2 rounded w-full bg-gradient-to-r from-mein-grun via-[#bbe1a6] to-[#c4e4a5]"
+                ></div></div></a
+            >
+            <a href="#easy"
+              ><div>
+                <p
+                  class="block antialiased   text-base leading-relaxed text-inherit bg-transparent px-4 py-6 font-bold"
+                >
+                  سهولة الوصول
+                </p>
+              </div></a
+            >
+            <a href="#prices"
+              ><div>
+                <p
+                  class="block antialiased   text-base leading-relaxed text-inherit bg-transparent px-4 py-6 font-bold"
+                >
+                  أسعار الخدمات
+                </p>
+              </div></a
+            >
+            <a class="" href="#questions"
+              ><div>
+                <p
+                  class="block antialiased   text-base leading-relaxed text-inherit false px-4 py-5 font-bold"
+                >
+                  الأسئلة الشائعة
+                </p>
+              </div></a
+            >
+            <a class="" href="#contact"
+              ><div>
+                <p
+                  class="block antialiased   text-base leading-relaxed text-inherit false px-4 py-5 font-bold"
+                >
+                  إتصل بنا
+                </p>
+              </div></a
+            >
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- hero -->
+
+      <section>
+        <div class="relative h-screen text-white">
+          <div class="absolute inset-0 overflow-hidden">
+            <div
+              class="carousel relative w-full h-full flex transition-transform duration-500"
+              id="carousel"
+            >
+              <!-- Slide 1 -->
+              <div
+                class="carousel-item w-full h-full flex-none bg-cover md:bg-center bg-right flex items-center justify-center px-5"
+                style="background-image: url('./media/slide1.png');"
+              >
+                <div
+                  class="md:w-1/2 text-right md:-bottom-5 -bottom-1/4 relative md:mt-20"
+                >
+                  <h2
+                    class="text-mein-grun text-2xl md:text-4xl font-extrabold md:w-3/4 md:justify-self-end"
+                  >
+                    الملف التعريفي لبرنامج العمـــــل عــــــــن
+                    بعــــــــــــــــد
+                  </h2>
+                  <p
+                    class="mt-4 md:text-xl text-lg md:w-3/4 md:justify-self-end"
+                  >
+                    تــعرف على أهم تفاصيل الخدمة عبر الإطلاع علـــــــــــى
+                    الملــــــــف التعريفــــــــي
+                  </p>
+                  <a
+                    class="selected inline-block text-white font-semibold px-4 py-2 rounded-xl hover:opacity-85 transition mt-5"
+                    href="media/Porfil-MRET.zip"
+                    download
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      class="text-white mr-1 text-xl inline-block relative bottom-0.5"
+                      height="1.1em"
+                      width="1.1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zm-1-4l-1.41-1.41L13 12.17V4h-2v8.17L8.41 9.59 7 11l5 5 5-5z"
+                      ></path>
+                    </svg>
+                    <span
+                      class="inline-block mr-1 border border-white h-5 relative -bottom-1"
+                    ></span>
+                    تحميل
+                  </a>
+                </div>
+                <div class="md:w-1/2"></div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div
+                class="carousel-item w-full h-full flex-none bg-cover bg-center flex items-center flex-col gap-y-10 justify-center px-5 md:mt-20"
+                style="background-image: url('./media/slide3.png');"
+              >
+                <h2 class="text-mein-grun text-2xl md:text-4xl font-extrabold">
+                  أطلب تجربة النظام والتحدث مع فريقنا الآن
+                </h2>
+                <button
+                  class="gradient-bg-button text-white font-semibold px-4 py-2 rounded-xl hover:opacity-85 transition"
+                >
+                  تواصل معنا
+                </button>
+              </div>
+
+              <!-- Slide 3 -->
+              <div
+                class="carousel-item w-full h-full flex-none bg-cover md:bg-center bg-right flex items-center justify-center px-5"
+                style="background-image: url('./media/slide4.png');"
+              >
+                <div
+                  class="md:w-1/2 text-right md:-bottom-5 -bottom-1/4 relative md:mt-20"
+                >
+                  <h2
+                    class="text-mein-grun text-2xl md:text-4xl font-extrabold md:w-3/4 md:justify-self-end"
+                  >
+                    عن شركة موارد الشرق الأوسط
+                  </h2>
+                  <p
+                    class="mt-4 md:text-xl text-lg md:w-3/4 md:justify-self-end text-gray-600"
+                  >
+                    مزود خدمة معتمد لبرنامج العمل عن بعد ومن أكثر الجهات موثوقية
+                    لمنشآت القطاع الخاص نظراً للخبرة الممتدة لسنوات في تقديم
+                    خدمة العمل عن بعد
+                  </p>
+                </div>
+                <div class="md:w-1/2"></div>
+              </div>
+            </div>
+
+            <!-- Navigation Indicators -->
+            <div
+              class="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2"
+            >
+              <button
+                class="w-3 h-3 rounded-full bg-[#7ADDD8] ccc dot-0 transition-all duration-500"
+                onclick="changeSelected(0)"
+              ></button>
+              <button
+                class="w-3 h-3 rounded-full bg-[#7ADDD8] ccc dot-1 transition-all duration-500"
+                onclick="changeSelected(1)"
+              ></button>
+              <button
+                class="w-3 h-3 rounded-full bg-[#7ADDD8] ccc dot-2 transition-all duration-500"
+                onclick="changeSelected(2)"
+              ></button>
+            </div>
+
+            <!-- Optional: Custom Controls -->
+            <button
+              class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#C4E4A5] disabled:opacity-50 text-white w-8 h-8 rounded-full ml-4"
+              onclick="prevSlide()"
+            >
+              <i class="fa-solid fa-chevron-left fa-sm"></i>
+            </button>
+            <button
+              class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#C4E4A5] disabled:opacity-50 text-white w-8 h-8 rounded-full mr-4"
+              onclick="nextSlide()"
+            >
+              <i class="fa-solid fa-chevron-right fa-sm"></i>
+            </button>
+          </div>
+          <!-- hero bar -->
+          <div
+            class="gradient-bg-bar px-4 py-3 translate-y-1/2 mx-4 flex items-center justify-evenly md:w-2/3 md:mx-auto p-4 rounded-3xl absolute bottom-0 inset-x-0"
+          >
+            <img
+              class="h-10 md:h-14"
+              src="./media/future.png"
+              alt="عمل المستقبل"
+            />
+            <div class="h-10 border border-white"></div>
+            <img class="h-10 md:h-14" src="./media/hr.png" alt="HR" />
+            <div class="h-10 border border-white"></div>
+            <img
+              class="h-10 md:h-14"
+              src="./media/far.png"
+              alt="العمل عن بعد"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- سهولة الوصول-->
+      <section id="easy">
+        <div
+          class="pb-10 bg-left bg-repeat"
+          style="background-image: url('./media/down.png');"
+        >
+          <div class="mx-auto w-1/2 md:w-5/12 lg:w-4/12">
+            <h3
+              class="anti text-mein-grun text-2xl md:text-4xl font-medium text-center mt-20 relative"
+            >
+              سهولة الوصول
+              <span
+                class="bg-[#bbe1a6] w-3/4 h-5 inline-block absolute left-1/2 -translate-x-1/2 translate-y-1/4 bottom-0 -z-10"
+              ></span>
+            </h3>
+          </div>
+
+          <div
+            class="mx-auto grid w-3/4 md:w-full md:grid-cols-2 lg:grid-cols-3 gap-6 xl:px-14 px-3 my-10"
+          >
+            <div
+              class="rounded-3xl px-5 pb-5 gradient-bg-card hover:scale-[1.05] transition-all duration-500"
+            >
+              <div class="p-6">
+                <div class="flex justify-between items-center pb-4">
+                  <img src="./media/money.png" class="h-12" alt="money" />
+                  <p
+                    class="antialiased text-xl leading-relaxed text-[#F1FBE7] font-bold ml-2 text-right"
+                  >
+                    عروض الاسعار
+                  </p>
+                </div>
+              </div>
+              <div class="flex justify-center pt-4 relative">
+                <span
+                  class="absolute w-[64%] mx-auto h-3 rounded-full bottom-0 translate-y-1/2 inline-block bg-[#f1fbe7]/50"
+                ></span>
+                <button
+                  class="bg-[#f1fbe7] text-mein-grun font-semibold px-4 py-2 rounded-xl hover:bg-gray-100 transition w-8/12 relative z-10"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                  المزيد
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="rounded-3xl px-5 pb-5 gradient-bg-card hover:scale-[1.05] transition-all duration-500"
+            >
+              <div class="p-6">
+                <div class="flex justify-between items-center pb-4">
+                  <img src="./media/list.png" class="h-12" alt="list.png" />
+                  <p
+                    class="antialiased text-xl leading-relaxed text-[#F1FBE7] font-bold ml-2 text-right"
+                  >
+                    لائحة عمل برنامج العمل عن بعد
+                  </p>
+                </div>
+              </div>
+              <div class="flex justify-center pt-4 relative">
+                <span
+                  class="absolute w-[64%] mx-auto h-3 rounded-full bottom-0 translate-y-1/2 inline-block bg-[#f1fbe7]/50"
+                ></span>
+                <button
+                  class="bg-[#f1fbe7] text-mein-grun font-semibold px-4 py-2 rounded-xl hover:bg-gray-100 transition w-8/12 relative z-10"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                  المزيد
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="rounded-3xl px-5 pb-5 gradient-bg-card hover:scale-[1.] transition-all duration-500"
+            >
+              <div class="p-6">
+                <div class="flex justify-between items-center pb-4">
+                  <img src="./media/book.png" class="h-12" alt="book" />
+                  <p
+                    class="antialiased text-xl leading-relaxed text-[#F1FBE7] font-bold ml-2 text-right"
+                  >
+                    المكتبة الاسترشادية
+                  </p>
+                </div>
+              </div>
+              <div class="flex justify-center pt-4 relative">
+                <span
+                  class="absolute w-[64%] mx-auto h-3 rounded-full bottom-0 translate-y-1/2 inline-block bg-[#f1fbe7]/50"
+                ></span>
+                <button
+                  class="bg-[#f1fbe7] text-mein-grun font-semibold px-4 py-2 rounded-xl hover:bg-gray-100 transition w-8/12 relative z-10"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                  المزيد
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- who -->
+      <section
+        class="container mx-auto px-10 bg-[#F1FBE7] flex md:flex-row flex-col items-center pt-10 pb-20"
+      >
+        <div class="flex lg:flex-row flex-col gap-7 items-center">
+          <div
+            class="relative md:w-1/2 w-full flex justify-center items-center"
+          >
+            <div class="relative md:w-4/5 w-full">
+              <div class="flex items-center">
+                <img
+                  src="./media/who.jpeg"
+                  class="rounded-3xl"
+                  alt="who are we"
+                />
+              </div>
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK0AAACLCAYAAAATWhloAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARFSURBVHgB7d1BTiNHFMbxVxWRdY4QySwwKx8hN4C5AXMC8A7Y0N4AO+QTBE4Qzw2SG5CVBcgSR8jai3rpxoI4nvKiq95Qhfj/JEt0I32afq+l8YJP5WSL08XDhRc56X5W0durwd5YMljlnc7nv7od97tz8puKzHSp4+vh8FkSWebVOjPrvNI78LGbZ4vHGy/atI/2S/dx7YOeP80bSWSZ53ak6R7u5WeRw+5hJYNVXs0zs84rvYPoS+udHkVuHksiyzzv/cH6dfuwI8lglVfzzKzzSu/AC/DBRF9a1TDdvBc03Ekiy7wgev//O24mGazyap6ZdV7pHURf2svBsGm/qU+dc/90n/aRJ9e7+yeSyDJPnX5ts76tLvSv4MNEMljl1Twz67xadwAAAAAAAAAAAAAAAAAAAAB8Bi528792pHvt6szCMkySW6qGeRvNzXtd6hfDJmhyXs0zs84rvYN4sfFnf7NqR66am+3nKKdxaZnXZv2x1twc5TZBrfJqnpl1XukdbCk26uHmndfQNJZ5OrLJsc6reWbWeWV3EC82Ovnz+5vhm6T+kwzzvstyci8ZrPJqnpl1XukdbHlp9auq3r2V4Lqy2U8uuVRnmddltf+F/L26aHOcfpEMVnk1z8w6r9YdAAAAAAAAAAAAAAAAAAAAAJ8BxUaKjc/SE8XG/lkUGwvnUWzsn0WxsXgexca8LIqN755HsTEhi2Jj2TyKjQAAAAAAAAAAAAAAAAAAAEA5btsvThcPF17k5Y+EVfT2arA3lgxWeRsluJkudWxYqsvKq3Vm1nmldxBtLpwtHm+8aPNagmvf7JPzp3kjiSzz3I40ayW4w9xSnVVezTOzziu9g3gb1+lR5OaxJLLM894frF+3DzuSDFZ5Nc/MOq/0DrwAH0y82KhhunkvaLiTRJZ5QXSjqelmksEqr+aZWeeV3kH0pb0cDJv2m/r0rbkpOrne3U9uglrmdc3NNmtVfe6amz5MJINVXs0zs86rdQcAAAAAAAAAAAAAAAAAAADAZ8Axoxwz+iw9ccxo/yyOGS2cxzGj/bM4ZrR4HseM5mVxzOi753HMaEIWx4yWzeOYUQAAAAAAAAAAAAAAAAAAAKAcio0UG5+lJ4qN/bMoNhbOo9jYP4tiY/E8io15WRQb3z2PYmNCFsXGsnkUGwEAAAAAAAAAAAAAAAAAAIBy3LZfnC4eLrzIyx8Jq+jt1WBvLBms8jZKcDNd6tiwVJeVV+vMrPNK7yDaXDhbPN540ea1BNe+2SfnT/NGElnmuR1p1kpwh7mlOqu8mmdmnVd6B/E2rtOjyM1jSWSZ570/WL9uH3YkGazyap6ZdV7pHXgBPph4sVHDdPNe0HAniSzzguhGU9PNJINVXs0zs84rvYPoS3s5GDbtN/XpW3NTdHK9u5/cBLXM65qbbdaq+tw1N32YSAarvJpnZp1X6w4AAAAAAD/Iv6rTH4knvKVwAAAAAElFTkSuQmCC"
+                alt="points"
+                class="absolute -top-[5%] -left-[5%] w-24"
+              />
+
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK0AAACLCAYAAAATWhloAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARFSURBVHgB7d1BTiNHFMbxVxWRdY4QySwwKx8hN4C5AXMC8A7Y0N4AO+QTBE4Qzw2SG5CVBcgSR8jai3rpxoI4nvKiq95Qhfj/JEt0I32afq+l8YJP5WSL08XDhRc56X5W0durwd5YMljlnc7nv7od97tz8puKzHSp4+vh8FkSWebVOjPrvNI78LGbZ4vHGy/atI/2S/dx7YOeP80bSWSZ53ak6R7u5WeRw+5hJYNVXs0zs84rvYPoS+udHkVuHksiyzzv/cH6dfuwI8lglVfzzKzzSu/AC/DBRF9a1TDdvBc03Ekiy7wgev//O24mGazyap6ZdV7pHURf2svBsGm/qU+dc/90n/aRJ9e7+yeSyDJPnX5ts76tLvSv4MNEMljl1Twz67xadwAAAAAAAAAAAAAAAAAAAAB8Bi528792pHvt6szCMkySW6qGeRvNzXtd6hfDJmhyXs0zs84rvYN4sfFnf7NqR66am+3nKKdxaZnXZv2x1twc5TZBrfJqnpl1XukdbCk26uHmndfQNJZ5OrLJsc6reWbWeWV3EC82Ovnz+5vhm6T+kwzzvstyci8ZrPJqnpl1XukdbHlp9auq3r2V4Lqy2U8uuVRnmddltf+F/L26aHOcfpEMVnk1z8w6r9YdAAAAAAAAAAAAAAAAAAAAAJ8BxUaKjc/SE8XG/lkUGwvnUWzsn0WxsXgexca8LIqN755HsTEhi2Jj2TyKjQAAAAAAAAAAAAAAAAAAAEA5btsvThcPF17k5Y+EVfT2arA3lgxWeRsluJkudWxYqsvKq3Vm1nmldxBtLpwtHm+8aPNagmvf7JPzp3kjiSzz3I40ayW4w9xSnVVezTOzziu9g3gb1+lR5OaxJLLM894frF+3DzuSDFZ5Nc/MOq/0DrwAH0y82KhhunkvaLiTRJZ5QXSjqelmksEqr+aZWeeV3kH0pb0cDJv2m/r0rbkpOrne3U9uglrmdc3NNmtVfe6amz5MJINVXs0zs86rdQcAAAAAAAAAAAAAAAAAAADAZ8Axoxwz+iw9ccxo/yyOGS2cxzGj/bM4ZrR4HseM5mVxzOi753HMaEIWx4yWzeOYUQAAAAAAAAAAAAAAAAAAAKAcio0UG5+lJ4qN/bMoNhbOo9jYP4tiY/E8io15WRQb3z2PYmNCFsXGsnkUGwEAAAAAAAAAAAAAAAAAAIBy3LZfnC4eLrzIyx8Jq+jt1WBvLBms8jZKcDNd6tiwVJeVV+vMrPNK7yDaXDhbPN540ea1BNe+2SfnT/NGElnmuR1p1kpwh7mlOqu8mmdmnVd6B/E2rtOjyM1jSWSZ570/WL9uH3YkGazyap6ZdV7pHXgBPph4sVHDdPNe0HAniSzzguhGU9PNJINVXs0zs84rvYPoS3s5GDbtN/XpW3NTdHK9u5/cBLXM65qbbdaq+tw1N32YSAarvJpnZp1X6w4AAAAAAD/Iv6rTH4knvKVwAAAAAElFTkSuQmCC"
+                alt="points"
+                class="absolute -bottom-[10%] right-[25%] w-24"
+              />
+            </div>
+          </div>
+
+          <div class="md:w-1/2 w-full md:px-4 md:py-0 py-4 text-right">
+            <div class="flex mb-4">
+              <div
+                class="border-b-2 mb-2 mr-2 border-mein-grun flex-grow"
+              ></div>
+              <h4
+                class="block antialiased tracking-normal text-2xl leading-snug text-mein-grun font-semibold"
+              >
+                من نحن
+              </h4>
+            </div>
+            <p
+              class="block antialiased text-xl font-normal leading-relaxed text-text"
+            >
+              تعد شركة موارد الشرق الأوسط من أوائل مزودي الخدمة ومن الجهات
+              الأكثر موثوقية لمنشآت القطاع الخاص وذلك لخبرتها الممتدة لسنوات في
+              تقديم خدمة العمل عن بعد. تقدم شركة موارد الشرق الأوسط عبر فروعها
+              خدمات التوظيف للموارد البشرية بكل إتقان والكثير من النظام الذكية
+              لإدارتهم. يؤمن القائمين على شركة موارد الشرق الأوسط على أهمية بناء
+              شراكة ناجحة من العملاء والعمل لتحقيق مصلحة العميل وتقديم كافة
+              الخدمات المساندة التي يطلبها العمل, لذا فإن كافة الخدمات
+              الاستشارية تقدم مجانا وتشمل المكتبة الاسترشادية وتوصيف الوظائف
+              المرتبطة ببرنامج العمل عن بعد إضافة إلى خدمات التوظيف ومصادر
+              الاستقطاب وبرامج الدعم وغيرها.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- العمل عن بعد -->
+      <section>
+        <div class="relative container px-20 pt-10 pb-20 overflow-hidden">
+          <div class="p-2 relative">
+            <p
+              class="block antialiased px-4 relative sm:text-4xl text-2xl font-semibold text-mein-grun text-center z-10"
+            >
+              خطوات العمل عن بعد
+            </p>
+            <div
+              class="sm:h-6 h-4 sm:w-96 w-60 bg-[#bbe1a6] absolute top-7 left-1/2 transform -translate-x-1/2"
+            ></div>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 text-right gap-y-5"
+          >
+            <div
+              class="relative bg-clip-border text-gray-700 bg-[#F1FBE7] hover:bg-gradient-to-br hover:from-mein-grun hover:to-[#c4e4a5] flex flex-col justify-between md:rounded-l-3xl md:rounded-r-none rounded-3xl group"
+            >
+              <div class="p-6 flex flex-col pt-4">
+                <p
+                  class="block antialiased mb-2 text-[#DDE7D3] text-8xl font-bold group-hover:text-[#C4E4A5]"
+                >
+                  04
+                </p>
+                <p
+                  class="block antialiased text-base leading-relaxed text-text group-hover:text-[#F1FBE7] font-medium text-[#9a9b9d]"
+                >
+                  ابدا العمل على نظام موارد لادارة العاملين عن بعد
+                </p>
+              </div>
+              <div
+                class="md:self-end self-center mx-1 w-4/5"
+                style="
+                  height: 5%;
+                  width: 80%;
+                  border-top: 4px solid rgb(241, 251, 231);
+                "
+              ></div>
+              <div
+                class="border-b-4 mx-1 w-4/5 border-[#7ADDD8] md:self-end self-center group-hover:opacity-0"
+              ></div>
+            </div>
+
+            <div
+              class="relative bg-clip-border text-gray-700 bg-[#F1FBE7] hover:bg-gradient-to-br hover:from-mein-grun hover:to-[#c4e4a5] flex flex-col justify-between rounded-3xl lg:rounded-none group"
+            >
+              <div class="p-6 flex flex-col pt-4">
+                <p
+                  class="block antialiased mb-2 text-[#DDE7D3] text-8xl font-bold group-hover:text-[#C4E4A5]"
+                >
+                  03
+                </p>
+                <p
+                  class="block antialiased text-base text-text group-hover:text-[#F1FBE7] font-medium text-[#9a9b9d] mb-[1.8rem]"
+                >
+                  انشاء عقد العمل مع المرشح المناسب
+                </p>
+              </div>
+              <div
+                class="self-center mx-1 w-4/5"
+                style="
+                  height: 5%;
+                  width: 80%;
+                  border-top: 4px solid rgb(241, 251, 231);
+                "
+              ></div>
+              <div
+                class="border-b-4 mx-1 w-4/5 border-[#7ADDD8] self-center group-hover:opacity-0"
+              ></div>
+            </div>
+
+            <div
+              class="relative bg-clip-border text-gray-700 bg-[#F1FBE7] hover:bg-gradient-to-br hover:from-mein-grun hover:to-[#c4e4a5] flex flex-col rounded-3xl lg:rounded-none justify-between group"
+            >
+              <div class="p-6 flex flex-col pt-4">
+                <p
+                  class="block antialiased mb-2 text-[#DDE7D3] text-8xl font-bold group-hover:text-[#C4E4A5]"
+                >
+                  02
+                </p>
+                <p
+                  class="block antialiased text-base leading-relaxed text-text group-hover:text-[#F1FBE7] font-medium text-[#9a9b9d] mb-[1.8rem]"
+                >
+                  اعلن عن الوظيفة و استقبل طالبين العمل
+                </p>
+              </div>
+              <div
+                class="self-center mx-1 w-4/5"
+                style="
+                  height: 5%;
+                  width: 80%;
+                  border-top: 4px solid rgb(241, 251, 231);
+                "
+              ></div>
+              <div
+                class="border-b-4 mx-1 w-4/5 border-[#7ADDD8] self-center group-hover:opacity-0"
+              ></div>
+            </div>
+
+            <div
+              class="relative bg-clip-border text-gray-700 bg-[#F1FBE7] hover:bg-gradient-to-br hover:from-mein-grun hover:to-[#C4E4A5] flex flex-col justify-between md:rounded-r-3xl md:rounded-l-none rounded-3xl group"
+            >
+              <div class="p-6 flex flex-col pt-4">
+                <p
+                  class="block antialiased mb-2 text-[#DDE7D3] text-8xl font-bold group-hover:text-[#C4E4A5]"
+                >
+                  01
+                </p>
+                <p
+                  class="block antialiased text-base leading-relaxed text-text group-hover:text-[#F1FBE7] font-medium text-[#9a9b9d]"
+                >
+                  انشاء العقد مع مزود الخدمة المعتمد على بوابة العمل عن بعد
+                </p>
+              </div>
+              <div
+                class="md:self-start self-center mx-1 w-4/5"
+                style="
+                  height: 5%;
+                  width: 80%;
+                  border-top: 4px solid rgb(241, 251, 231);
+                "
+              ></div>
+              <div
+                class="border-b-4 mx-1 w-4/5 border-[#7ADDD8] md:self-start self-center group-hover:opacity-0"
+              ></div>
+            </div>
+          </div>
+
+          <img
+            src="./media/left.png"
+            alt="arrow left"
+            class="absolute w-1/2 -top-1/2 -right-[35%] z-0"
+          />
+        </div>
+      </section>
+
+      <!-- الاسئلة الشائعة -->
+
+      <section
+        id="questions"
+        class="md:px-48 px-10 py-10"
+        style="
+          background-image: url('./media/banner.png');
+          background-size: cover;
+        "
+      >
+        <div class="p-2 relative">
+          <p
+            class="block antialiased px-4 relative sm:text-4xl text-2xl font-semibold text-[#F1FBE7] text-center"
+          >
+            الأسئلة الشائعة
+          </p>
+        </div>
+        <div class="mt-5 flex flex-col items-center">
+          <p
+            class="block antialiased text-xl font-normal leading-relaxed text-white text-center"
+          >
+            قمنا بتجميع أسئلة العملاء الشائعة ووضعها في صفحة الأسئلة المتكررة،
+            ويسرنا الإجابة على أي استفسارات تخطر في بالك في أي وقت
+          </p>
+          <a
+            class="flex items-center rounded-xl mt-5 bg-[#F1FBE7] p-2 transition-opacity duration-500 ease-out opacity-100 hover:opacity-60"
+            href=""
+          >
+            <i class="fa-solid fa-chevron-left text-xs text-mein-grun mx-2"></i>
+
+            <p
+              class="block antialiased text-sm leading-relaxed text-mein-grun font-semibold"
+            >
+              اضغط هنا للإنتقال لصفحة الاسئلة
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <!-- احصائيات-->
+
+      <section class="md:px-48 px-10 pt-10 pb-20 bg-[#f1fbe7]">
+        <div class="p-2 relative">
+          <p
+            class="block antialiased px-4 relative sm:text-4xl text-2xl font-semibold text-mein-grun text-center z-10"
+          >
+            إحصائيات نظام موارد إلدارة العاملين عن بعد
+          </p>
+          <div
+            class="sm:h-6 h-4 sm:w-[680px] w-52 bg-[#bbe1a6] absolute top-7 left-1/2 transform -translate-x-1/2"
+          ></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-10">
+          <div
+            class="flex flex-col items-center py-4 md:py-0 lg:py-0 md:px-4 lg:px-4 md:border-r border-r-0 border-[#c4e4a5]"
+          >
+            <h1
+              class="block antialiased tracking-normal text-5xl leading-tight mb-4 text-[#c4e4a5] font-bold"
+            >
+              + 400
+            </h1>
+            <p
+              class="block antialiased text-xl font-normal leading-relaxed text-text text-center"
+            >
+              مرشح متخصص جاهز للعمل ضمن قاعدة بياناتنا
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <h1
+              class="block antialiased tracking-normal text-5xl leading-tight mb-4 text-[#c4e4a5] font-bold"
+            >
+              + 1000
+            </h1>
+            <p
+              class="block antialiased text-xl font-normal leading-relaxed text-text text-center"
+            >
+              مستخــدم نــشط يوميــاً على منصــة مــوارد
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- الاشتراكات-->
+
+      <section
+        id="prices"
+        class="md:px-48 px-10 pt-10 pb-20 bg-white"
+        id="pricesSection"
+      >
+        <div class="p-2 relative">
+          <p
+            class="block antialiased px-4 relative sm:text-4xl text-2xl font-semibold text-mein-grun text-center z-10"
+          >
+            الأسعار
+          </p>
+          <div
+            class="sm:h-6 h-4 sm:w-36 w-28 bg-[#c4e4a5] absolute top-7 left-1/2 transform -translate-x-1/2"
+          ></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+          <div
+            class="relative flex flex-col bg-clip-border rounded-xl text-gray-700 bg-[#F1FBE7] hover:bg-mein-grun group hover:scale-105 transition duration-300"
+          >
+            <div
+              class="relative bg-clip-border overflow-hidden text-gray-700 px-4 pt-4 m-0 bg-transparent rounded-none border-b border-[#7ADDD8] group-hover:border-[#F1FBE7]"
+            >
+              <h3
+                class="block antialiased tracking-normal text-3xl font-semibold leading-snug mb-4 text-mein-grun group-hover:text-[#F1FBE7] text-center p-0"
+              >
+                باقة المساندة
+              </h3>
+            </div>
+            <div class="p-6 flex flex-col justify-center pt-4">
+              <ul class="list-disc text-text group-hover:text-[#F1FBE7] px-4">
+                <li>مدة التعاقد بالباقة سنتين ميلادية بدون رسوم تأسيس</li>
+                <li>
+                  تسجيل الموظفين والموظفات في بوابة العمل عن بعد التابعة لوزارة
+                  العمل والتنمية الإجتماعية
+                </li>
+                <li>تفعيل منصة موارد الإلكترونية</li>
+                <li>
+                  تدريب الموظفين عن بعد والمشرفين من قبل صاحب العمل على آلية عمل
+                  منصة موارد الإلكترونية
+                </li>
+                <li>
+                  تقديم الخدمات الإستشارية والخطط التوظيفية المسانده لاحتياجات
+                  المنشأة
+                </li>
+                <li>إدارة كاملة لعملية الاستقطاب والتوظيف وحتى إتمام</li>
+                <li>التعاقد من خلال شركة الريادة الوطنية للتوظيف</li>
+                <li>
+                  تفعيل نظام موارد لمتابعة الحضور والإنصراف وتقييم الآداء
+                  للموظفين عن بعد
+                </li>
+                <li>إرسال إشعارات دورية لزيادة إنتاجية العمل تقديم حقيبة</li>
+                <li>تدريبية متكاملة عن طبيعة العمل عن بعد للموظفين</li>
+                <li>دعم فني على مدار الساعة 7/24</li>
+              </ul>
+            </div>
+            <div class="p-6">
+              <div class="w-full flex justify-center">
+                <a
+                  class="w-2/3 flex justify-center items-center rounded-xl bg-[#7ADDD8] group-hover:bg-[#F1FBE7] p-2 transition-opacity duration-500 ease-out opacity-100 hover:opacity-60"
+                  href="#/register"
+                  style="
+                    box-shadow: rgba(241, 251, 231, 0.5) 0px 12px 0px -5px;
+                    border-radius: 10px;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-chevron-left text-white mr-2 text-xs group-hover:text-mein-grun"
+                  ></i>
+                  <p
+                    class="block antialiased text-base leading-relaxed text-white group-hover:text-mein-grun font-semibold mr-2"
+                  >
+                    اشترك
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="relative flex flex-col bg-clip-border rounded-xl text-gray-700 bg-[#F1FBE7] hover:bg-mein-grun group hover:scale-105 transition duration-300"
+          >
+            <div
+              class="relative bg-clip-border overflow-hidden text-gray-700 px-4 pt-4 m-0 bg-transparent rounded-none border-b border-[#7ADDD8] group-hover:border-[#F1FBE7]"
+            >
+              <h3
+                class="block antialiased tracking-normal text-3xl font-semibold leading-snug mb-4 text-mein-grun group-hover:text-[#F1FBE7] text-center p-0"
+              >
+                الباقة الاساسية
+              </h3>
+            </div>
+            <div class="p-6 flex flex-col justify-center flex-1 pt-4">
+              <ul class="list-disc text-text group-hover:text-[#F1FBE7] px-4">
+                <li>مدة التعاقد بالباقة سنتين بدون رسوم تأسيس</li>
+                <li>
+                  تسجيل الموظفين والموظفات في بوابة العمل عن بعد التابعة لوزارة
+                  العمل و التنمية الإجتماعية
+                </li>
+                <li>تفعيل منصة موارد الإلكترونية</li>
+                <li>دعم فني على مدار الساعة</li>
+              </ul>
+              <div></div>
+            </div>
+            <div class="p-6">
+              <div class="w-full flex justify-center">
+                <a
+                  class="w-2/3 flex justify-center items-center rounded-xl bg-[#7ADDD8] group-hover:bg-[#F1FBE7] p-2 transition-opacity duration-500 ease-out opacity-100 hover:opacity-60"
+                  href="#/register"
+                  style="
+                    box-shadow: rgba(241, 251, 231, 0.5) 0px 12px 0px -5px;
+                    border-radius: 10px;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-chevron-left text-white mr-2 text-xs group-hover:text-mein-grun"
+                  ></i>
+                  <p
+                    class="block antialiased text-base leading-relaxed text-white group-hover:text-mein-grun font-semibold mr-2"
+                  >
+                    اشترك
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- اتصل بنا-->
+      <section id="contact" class="md:px-48 px-10 py-10 bg-[#E6E6E6]">
+        <div class="p-2 relative">
+          <p
+            class="block antialiased px-4 relative sm:text-4xl text-2xl font-semibold text-mein-grun text-center z-10"
+          >
+            اتصل بنا
+          </p>
+          <div
+            class="sm:h-6 h-4 sm:w-36 w-28 bg-[#bbe1a6] absolute top-7 left-1/2 transform -translate-x-1/2"
+          ></div>
+        </div>
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-4 text-[#c4e4a5] mt-10">
+          <input
+            type="email"
+            placeholder="البريد الإلكتروني"
+            class="md:col-span-2 col-span-1 px-3 py-2 rounded-xl border-2 placeholder:font-light border-gray-300 text-right"
+          /><input
+            type="text"
+            placeholder="الاسم"
+            class="px-3 py-2 rounded-xl border-2 placeholder:font-light border-gray-300 text-right"
+          /><input
+            type="text"
+            placeholder="اللقب"
+            class="px-3 py-2 rounded-xl border-2 placeholder:font-light border-gray-300 text-right"
+          /><input
+            type="text"
+            placeholder="رقم الهاتف"
+            class="px-3 py-2 rounded-xl border-2 placeholder:font-light border-gray-300 text-right"
+          /><input
+            type="text"
+            placeholder="العنوان"
+            class="px-3 py-2 rounded-xl border-2 placeholder:font-light border-gray-300 text-right"
+          /><textarea
+            type="text"
+            placeholder="الرسالة"
+            class="md:col-span-2 col-span-1 px-3 py-2 h-36 rounded-xl border-2 placeholder:font-light border-gray-300 text-right"
+          ></textarea>
+        </div>
+        <div class="w-full flex justify-start">
+          <button
+            class="flex items-center rounded-xl px-5 bg-mein-grun p-2 mt-5 transition-opacity duration-500 ease-out opacity-100 hover:opacity-60"
+          >
+            <i class="fa-solid fa-chevron-left text-xs text-[#F1FBE7] mr-2"></i>
+            <p
+              class="block antialiased text-base leading-relaxed text-white font-semibold mr-2"
+            >
+              ارسل
+            </p>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-mein-grun text-white">
+      <div>
+        <div class="container px-10">
+          <div
+            class="border-b border-b-[#c4e4a5] grid md:grid-cols-2 grid-cols-1 gap-4 py-12"
+          >
+            <div class="flex flex-col">
+              <div class="flex items-center justify-end gap-2 mb-4">
+                <a
+                  href="https://x.com/mertcomsa"
+                  target="_blank"
+                  class="border-2 rounded-full flex justify-center items-center w-8 h-8 group hover:border-black transition-all duration-200 border-white p-1"
+                  ><i
+                    class="fa-brands fa-x-twitter group-hover:text-black transition-all duration-200"
+                  ></i
+                ></a>
+              </div>
+              <div class="flex items-center justify-end">
+                <p
+                  class="block antialiased text-base font-light leading-relaxed text-inherit px-2"
+                >
+                  +966 54 592 1998
+                </p>
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  class="text-xl text-white"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path fill="none" d="M0 0h24v24H0V0z"></path>
+                  <path
+                    d="M15 12h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3zm4 0h2a9 9 0 00-9-9v2c3.87 0 7 3.13 7 7zm1 3.5c-1.25 0-2.45-.2-3.57-.57-.1-.03-.21-.05-.31-.05-.26 0-.51.1-.71.29l-2.2 2.2a15.045 15.045 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM5.03 5h1.5c.07.88.22 1.75.45 2.58l-1.2 1.21c-.4-1.21-.66-2.47-.75-3.79zM19 18.97c-1.32-.09-2.6-.35-3.8-.76l1.2-1.2c.85.24 1.72.39 2.6.45v1.51z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex items-start text-right justify-end">
+                <p
+                  class="justify-end antialiased text-base font-light leading-relaxed text-inherit px-2 md:w-2/3 w-full flex gap-1"
+                >
+                  <span class="order-1"> 14 , 13</span>
+                  <span>
+                    الدائرى الشرقى بين مخرجى فى الجهة الغربية , الربوة , الرياض
+                  </span>
+                </p>
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  class="text-xl text-white"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 1.74.5 3.37 1.41 4.84.95 1.54 2.2 2.86 3.16 4.4.47.75.81 1.45 1.17 2.26.26.55.47 1.5 1.26 1.5s1-.95 1.25-1.5c.37-.81.7-1.51 1.17-2.26.96-1.53 2.21-2.85 3.16-4.4C18.5 12.37 19 10.74 19 9c0-3.87-3.13-7-7-7zm0 9.75a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-start items-end">
+              <a href="#/"
+                ><p
+                  class="block antialiased text-base font-light leading-relaxed text-inherit px-2"
+                >
+                  الرئيسية
+                </p></a
+              ><a href="#/"
+                ><p
+                  class="block antialiased text-base font-light leading-relaxed text-inherit px-2"
+                >
+                  البرنامج
+                </p></a
+              ><a href="#/"
+                ><p
+                  class="block antialiased text-base font-light leading-relaxed text-inherit px-2"
+                >
+                  الأسعار
+                </p></a
+              ><a href="#/"
+                ><p
+                  class="block antialiased text-base font-light leading-relaxed text-inherit px-2"
+                >
+                  خطوات العمل عن بعد
+                </p></a
+              ><a href="#/questions"
+                ><p
+                  class="block antialiased text-base font-light leading-relaxed text-inherit px-2"
+                >
+                  الأسئلة الشائعة
+                </p></a
+              ><a href="#/about"
+                ><p
+                  class="block antialiased text-base font-light leading-relaxed text-inherit px-2"
+                >
+                  لماذا نحن؟
+                </p></a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="container flex items-center justify-between py-4 px-5  md:px-10"
+        >
+          <div class="flex items-center flex-row-reverse">
+            <button
+              class="flex items-center flex-row-reverse rounded-xl bg-transparent p-1 border transition-opacity duration-500 ease-out opacity-100 hover:opacity-60"
+            >
+              <i class="fa-solid fa-chevron-down text-white mx-2 fa-xs"></i>
+              <div class="h-6 border border-white"></div>
+              <p
+                class="block antialiased text-base leading-relaxed text-white font-semibold mx-2"
+              >
+                العربية
+              </p>
+            </button>
+            <div class="h-8 border border-[#c4e4a5] mx-4"></div>
+            <a
+              class="flex flex-row-reverse items-center rounded-xl bg-white p-2 transition-opacity duration-500 ease-out opacity-100 hover:opacity-60"
+              href="#contact"
+            >
+              <i class="fa-solid fa-pencil-alt fa-sm text-mein-grun mx-2"></i>
+              <div class="h-6 border border-mein-grun"></div>
+              <p
+                class="block antialiased text-base leading-relaxed text-mein-grun font-bold mr-2"
+              >
+                تحدث معنا الآن
+              </p></a
+            >
+          </div>
+          <p
+            class="block antialiased text-base font-light leading-relaxed text-inherit px-2"
+          >
+            الشروط | الخصوصية
+          </p>
+        </div>
+
+        <hr class="border-[#c4e4a5] mx-10" />
+        <div class="bg-white w-full p-3">
+          <div
+            class="container mx-auto flex flex-wrap flex-row-reverse lg:justify-between justify-center items-center"
+          >
+            <div class="flex flex-wrap flex-row-reverse justify-center items-center">
+              <img
+                src="./media/footerLogo.png"
+                class="h-8 mx-2"
+                alt="footer 1"
+              />
+              <div class="h-8 border border-text mx-4"></div>
+              <img
+                src="./media/footerHR.png"
+                class="h-8 mx-2"
+                alt="footer 2"
+              /><img
+                src="./media/footerWork.png"
+                class="h-8 mx-2"
+                alt="footer 3"
+              /><img
+                src="./media/footerFu.png"
+                class="h-8 mx-2"
+                alt="footer 4"
+              />
+            </div>
+            <p class="text-center text-text md:mt-0 mt-4">
+              © 2024 جميع الحقوق محفوظة لـ موارد الشرق الأوسط
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="./js/index.js"></script>
+  </body>
+</html>
