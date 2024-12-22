@@ -26,18 +26,17 @@ function changeSelected(x) {
   changeSlide(x)
   let thisDot = document.querySelector('.dot-' + x);
   let buttons = document.querySelectorAll('.ccc');
-  console.log(buttons);
 
 
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].classList.remove('selected');
-    buttons[i].classList.remove('w-10');
+    buttons[i].classList.remove('!w-10');
     buttons[i].classList.add('w-3');
   }
 
   thisDot.classList.add('selected');
   thisDot.classList.remove('w-3');
-  thisDot.classList.add('w-10');
+  thisDot.classList.add('!w-10');
 }
 
 
@@ -51,6 +50,60 @@ function toggleMenu() {
   dropdownMenu.classList.toggle("hidden");
   dropdownMenu.classList.toggle("flex");
 }
+
+
+let navLinks = document.querySelectorAll("#menu a")
+const sections = document.querySelectorAll('section');
+window.onload= ()=>{
+  addActiveClass('hero')
+}
+
+  // Function to remove active class from all links
+  function removeActiveClasses() {
+    navLinks.forEach((linko) => {
+      linko.classList.remove("active");
+      linko.children[0].children[1].classList.add("opacity-0")  
+      linko.children[0].children[0].classList.remove("bg-[#f2f2f2]")
+      console.log(linko.children[0].children[0])
+      
+      
+
+    })
+  }
+
+  // Function to add active class to the current section's link
+  function addActiveClass(id) {
+    const activeLink = document.querySelector(`nav div div ul a[href="#${id}"]`);
+    if (activeLink) {
+      
+      activeLink.children[0].children[1].classList.remove("opacity-0")  
+      activeLink.children[0].children[0].classList.add("bg-[#f2f2f2]")
+    }
+  }
+
+  // Scroll event listener
+  window.addEventListener('scroll', () => {
+    let currentSection = '';
+
+    // Check which section is in the viewport
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+
+      if (window.scrollY >= sectionTop - sectionHeight / 2 - 200) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    // Update the active class
+    removeActiveClasses();
+    if (currentSection) {
+      addActiveClass(currentSection);
+    }
+  });
+
+
+
 
 
 

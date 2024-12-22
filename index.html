@@ -15,7 +15,7 @@
   <body class="bg-green-50 font-arabic">
     <!-- Navbar -->
     <nav class="m-4 fixed left-0 right-0 z-[9999]">
-      <!-- الصف العلوي -->
+      <!-- الصف الاول -->
       <div
         class="gradient-bg px-4 py-2 flex flex-row-reverse justify-between items-center rounded-2xl"
       >
@@ -56,12 +56,12 @@
         </div>
       </div>
 
-      <!-- الصف السفلي -->
+      <!-- الصف التانى -->
 
       <div
-        class="py-2 px-2 backdrop-saturate-200 backdrop-blur-2xl bg-opacity-80 border-white/80 w-full max-w-full bg-white text-white md:py-0 md:px-0 rounded-2xl border-0 flex justify-between items-center relative"
+        class="py-2 px-2 backdrop-saturate-200 backdrop-blur-2xl bg-opacity-80 border-white/80 w-full max-w-full bg-white text-white md:py-0  rounded-2xl border-0 flex justify-between items-center relative"
       >
-        <!-- زر الدخول وطلب التوظيف -->
+        <!-- زرار الدخول وطلب التوظيف -->
         <div class="flex items-center space-x-4 rtl:space-x-reverse">
           <button
             class="border border-mein-grun text-mein-grun font-semibold px-2 py-2 rounded-xl hover:bg-teal-50 transition"
@@ -79,51 +79,76 @@
 
         <div class="hidden lg:block">
           <ul
+            id="menu"
             class="mb-4 mt-2 flex flex-col lg:mb-0 lg:mt-0 lg:flex-row-reverse lg:items-center text-mein-grun"
           >
-            <a aria-current="page" class="active" href="#"
-              ><div>
+            <a aria-current="page" class="active" href="#hero">
+              <div>
                 <p
-                  class="block antialiased text-base leading-relaxed text-inherit bg-[#F2F2F2] px-4 py-5 font-bold"
+                  class="block antialiased text-base leading-relaxed text-inherit  px-4 py-5 font-bold"
                 >
                   الرئيسية
                 </p>
                 <div
-                  class="h-2 rounded w-full bg-gradient-to-r from-mein-grun via-[#bbe1a6] to-[#c4e4a5]"
-                ></div></div></a
-            ><a href="#easy"
+                  class="h-2 opacity-0  rounded w-full bg-gradient-to-r from-mein-grun via-[#bbe1a6] to-[#c4e4a5]"
+                ></div>
+              </div>
+            </a>
+
+            <a href="#easy"
               ><div>
                 <p
-                  class="block antialiased text-base leading-relaxed text-inherit bg-transparent px-4 py-6 font-bold"
+                  class="block antialiased text-base leading-relaxed text-inherit bg-transparent px-4 py-5 font-bold"
                 >
                   سهولة الوصول
                 </p>
+                <div
+                  class="h-2 opacity-0 rounded w-full bg-gradient-to-r from-mein-grun via-[#bbe1a6] to-[#c4e4a5]"
+                ></div>
               </div></a
-            ><a href="#prices"
-              ><div>
-                <p
-                  class="block antialiased text-base leading-relaxed text-inherit bg-transparent px-4 py-6 font-bold"
-                >
-                  أسعار الخدمات
-                </p>
-              </div></a
-            ><a class="" href="#questions"
-              ><div>
+            >
+
+            <a class="" href="#questions"
+              >
+              <div>
                 <p
                   class="block antialiased text-base leading-relaxed text-inherit false px-4 py-5 font-bold"
                 >
                   الأسئلة الشائعة
                 </p>
-              </div></a
-            ><a class="" href="#contact"
+                <div
+                  class="h-2 opacity-0 rounded w-full bg-gradient-to-r from-mein-grun via-[#bbe1a6] to-[#c4e4a5]"
+                ></div>
+              </div>
+            </a>
+
+
+            <a href="#prices"
               ><div>
+                <p
+                  class="block antialiased text-base leading-relaxed text-inherit bg-transparent px-4 py-5 font-bold"
+                >
+                  أسعار الخدمات
+                </p>
+                <div
+                  class="h-2 opacity-0 rounded w-full bg-gradient-to-r from-mein-grun via-[#bbe1a6] to-[#c4e4a5]"
+                ></div>
+              </div></a
+            >
+            
+
+            <a class="" href="#contact">
+              <div>
                 <p
                   class="block antialiased text-base leading-relaxed text-inherit false px-4 py-5 font-bold"
                 >
                   إتصل بنا
                 </p>
-              </div></a
-            >
+                <div
+                  class="h-2 opacity-0 rounded w-full bg-gradient-to-r from-mein-grun via-[#bbe1a6] to-[#c4e4a5]"
+                ></div>
+              </div>
+            </a>
           </ul>
         </div>
 
@@ -160,9 +185,10 @@
       </div>
 
       <!-- القائمة للموبايل -->
-      <div 
-      id="dropdownMenu"
-      class=" bg-white  justify-center w-1/2 ml-auto overflow-hidden hidden rounded-3xl" >
+      <div
+        id="dropdownMenu"
+        class="bg-white justify-center w-1/2 ml-auto overflow-hidden hidden rounded-3xl"
+      >
         <div class="text-center">
           <ul
             class="mb-4 mt-2 flex flex-col w-full lg:mb-0 lg:mt-0 lg:flex-row lg:items-center text-mein-grun"
@@ -170,18 +196,18 @@
             <a aria-current="page" class="active" href="#"
               ><div>
                 <p
-                  class="block antialiased   text-base leading-relaxed text-inherit bg-[#F2F2F2] px-4 py-5 font-bold"
+                  class="block antialiased text-base leading-relaxed text-inherit bg-[#F2F2F2] px-4 py-5 font-bold"
                 >
                   الرئيسية
                 </p>
                 <div
                   class="h-2 rounded w-full bg-gradient-to-r from-mein-grun via-[#bbe1a6] to-[#c4e4a5]"
-                ></div></div></a
-            >
+                ></div></div
+            ></a>
             <a href="#easy"
               ><div>
                 <p
-                  class="block antialiased   text-base leading-relaxed text-inherit bg-transparent px-4 py-6 font-bold"
+                  class="block antialiased text-base leading-relaxed text-inherit bg-transparent px-4 py-6 font-bold"
                 >
                   سهولة الوصول
                 </p>
@@ -190,7 +216,7 @@
             <a href="#prices"
               ><div>
                 <p
-                  class="block antialiased   text-base leading-relaxed text-inherit bg-transparent px-4 py-6 font-bold"
+                  class="block antialiased text-base leading-relaxed text-inherit bg-transparent px-4 py-6 font-bold"
                 >
                   أسعار الخدمات
                 </p>
@@ -199,7 +225,7 @@
             <a class="" href="#questions"
               ><div>
                 <p
-                  class="block antialiased   text-base leading-relaxed text-inherit false px-4 py-5 font-bold"
+                  class="block antialiased text-base leading-relaxed text-inherit false px-4 py-5 font-bold"
                 >
                   الأسئلة الشائعة
                 </p>
@@ -208,7 +234,7 @@
             <a class="" href="#contact"
               ><div>
                 <p
-                  class="block antialiased   text-base leading-relaxed text-inherit false px-4 py-5 font-bold"
+                  class="block antialiased text-base leading-relaxed text-inherit false px-4 py-5 font-bold"
                 >
                   إتصل بنا
                 </p>
@@ -222,7 +248,7 @@
     <main>
       <!-- hero -->
 
-      <section>
+      <section id="hero">
         <div class="relative h-screen text-white">
           <div class="absolute inset-0 overflow-hidden">
             <div
@@ -231,7 +257,7 @@
             >
               <!-- Slide 1 -->
               <div
-                class="carousel-item w-full h-full flex-none bg-cover md:bg-center bg-right flex items-center justify-center px-5"
+                class="carousel-item w-full h-full flex-none bg-cover md:bg-center bg-[77%]  flex items-center justify-center px-5"
                 style="background-image: url('./media/slide1.png');"
               >
                 <div
@@ -250,25 +276,11 @@
                     الملــــــــف التعريفــــــــي
                   </p>
                   <a
-                    class="selected inline-block text-white font-semibold px-4 py-2 rounded-xl hover:opacity-85 transition mt-5"
+                    class=" selected inline-block text-white font-semibold px-4 py-2 rounded-xl hover:opacity-85 transition mt-5"
                     href="media/Porfil-MRET.zip"
                     download
                   >
-                    <svg
-                      stroke="currentColor"
-                      fill="currentColor"
-                      stroke-width="0"
-                      viewBox="0 0 24 24"
-                      class="text-white mr-1 text-xl inline-block relative bottom-0.5"
-                      height="1.1em"
-                      width="1.1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill="none" d="M0 0h24v24H0z"></path>
-                      <path
-                        d="M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zm-1-4l-1.41-1.41L13 12.17V4h-2v8.17L8.41 9.59 7 11l5 5 5-5z"
-                      ></path>
-                    </svg>
+                    
                     <span
                       class="inline-block mr-1 border border-white h-5 relative -bottom-1"
                     ></span>
@@ -307,7 +319,7 @@
                     عن شركة موارد الشرق الأوسط
                   </h2>
                   <p
-                    class="mt-4 md:text-xl text-lg md:w-3/4 md:justify-self-end text-gray-600"
+                    class="mt-4 md:text-xl text-lg md:w-3/4 md:justify-self-end text-white"
                   >
                     مزود خدمة معتمد لبرنامج العمل عن بعد ومن أكثر الجهات موثوقية
                     لمنشآت القطاع الخاص نظراً للخبرة الممتدة لسنوات في تقديم
@@ -473,7 +485,7 @@
       </section>
 
       <!-- who -->
-      <section
+      <section id="easy"
         class="container mx-auto px-10 bg-[#F1FBE7] flex md:flex-row flex-col items-center pt-10 pb-20"
       >
         <div class="flex lg:flex-row flex-col gap-7 items-center">
@@ -532,8 +544,8 @@
       </section>
 
       <!-- العمل عن بعد -->
-      <section>
-        <div class="relative container px-20 pt-10 pb-20 overflow-hidden">
+      <section id="questions">
+        <div class="relative container px-5 md:px-20 pt-10 pb-20 overflow-hidden">
           <div class="p-2 relative">
             <p
               class="block antialiased px-4 relative sm:text-4xl text-2xl font-semibold text-mein-grun text-center z-10"
@@ -558,7 +570,7 @@
                   04
                 </p>
                 <p
-                  class="block antialiased text-base leading-relaxed text-text group-hover:text-[#F1FBE7] font-medium text-[#9a9b9d]"
+                  class="block antialiased text-base leading-relaxed text-text group-hover:text-[#F1FBE7] font-medium "
                 >
                   ابدا العمل على نظام موارد لادارة العاملين عن بعد
                 </p>
@@ -586,7 +598,7 @@
                   03
                 </p>
                 <p
-                  class="block antialiased text-base text-text group-hover:text-[#F1FBE7] font-medium text-[#9a9b9d] mb-[1.8rem]"
+                  class="block antialiased text-base text-text group-hover:text-[#F1FBE7] font-medium  mb-[1.8rem]"
                 >
                   انشاء عقد العمل مع المرشح المناسب
                 </p>
@@ -614,7 +626,7 @@
                   02
                 </p>
                 <p
-                  class="block antialiased text-base leading-relaxed text-text group-hover:text-[#F1FBE7] font-medium text-[#9a9b9d] mb-[1.8rem]"
+                  class="block antialiased text-base leading-relaxed text-text group-hover:text-[#F1FBE7] font-medium mb-[1.8rem]"
                 >
                   اعلن عن الوظيفة و استقبل طالبين العمل
                 </p>
@@ -642,7 +654,7 @@
                   01
                 </p>
                 <p
-                  class="block antialiased text-base leading-relaxed text-text group-hover:text-[#F1FBE7] font-medium text-[#9a9b9d]"
+                  class="block antialiased text-base leading-relaxed text-text group-hover:text-[#F1FBE7] font-medium "
                 >
                   انشاء العقد مع مزود الخدمة المعتمد على بوابة العمل عن بعد
                 </p>
@@ -710,7 +722,7 @@
 
       <!-- احصائيات-->
 
-      <section class="md:px-48 px-10 pt-10 pb-20 bg-[#f1fbe7]">
+      <section id="prices" class="md:px-48 px-10 pt-10 pb-20 bg-[#f1fbe7]">
         <div class="p-2 relative">
           <p
             class="block antialiased px-4 relative sm:text-4xl text-2xl font-semibold text-mein-grun text-center z-10"
@@ -934,6 +946,7 @@
           </button>
         </div>
       </section>
+
     </main>
 
     <!-- footer -->
@@ -941,10 +954,10 @@
       <div>
         <div class="container px-10">
           <div
-            class="border-b border-b-[#c4e4a5] grid md:grid-cols-2 grid-cols-1 gap-4 py-12"
+            class="justify-end border-b border-b-[#c4e4a5] flex flex-wrap md:justify-center gap-y-4 py-12"
           >
-            <div class="flex flex-col">
-              <div class="flex items-center justify-end gap-2 mb-4">
+            <div class="flex flex-col  order-1 md:w-1/2">
+              <div class="flex items-center justify-end gap-2 mb-4 ">
                 <a
                   href="https://x.com/mertcomsa"
                   target="_blank"
@@ -1003,7 +1016,7 @@
               </div>
             </div>
 
-            <div class="flex flex-col justify-start items-end">
+            <div class="flex flex-col justify-start items-end md:order-2 md:w-1/2">
               <a href="#/"
                 ><p
                   class="block antialiased text-base font-light leading-relaxed text-inherit px-2"
@@ -1042,13 +1055,14 @@
                 </p></a
               >
             </div>
+
           </div>
         </div>
 
         <div
-          class="container flex items-center justify-between py-4 px-5  md:px-10"
+          class="container flex md:flex-nowrap flex-wrap justify-center md:justify-between items-center py-4 px-3 md:px-10 gap-y-2"
         >
-          <div class="flex items-center flex-row-reverse">
+          <div class="flex items-center md:justify-end justify-evenly md:w-1/2 w-full flex-row-reverse">
             <button
               class="flex items-center flex-row-reverse rounded-xl bg-transparent p-1 border transition-opacity duration-500 ease-out opacity-100 hover:opacity-60"
             >
@@ -1086,7 +1100,9 @@
           <div
             class="container mx-auto flex flex-wrap flex-row-reverse lg:justify-between justify-center items-center"
           >
-            <div class="flex flex-wrap flex-row-reverse justify-center items-center">
+            <div
+              class="flex flex-wrap flex-row-reverse justify-center items-center"
+            >
               <img
                 src="./media/footerLogo.png"
                 class="h-8 mx-2"
@@ -1114,7 +1130,7 @@
         </div>
       </div>
     </footer>
-    
+
     <script src="./js/index.js"></script>
   </body>
 </html>
