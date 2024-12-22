@@ -53,9 +53,21 @@ function toggleMenu() {
 
 
 let navLinks = document.querySelectorAll("#menu a")
+let mobileLinks = document.querySelectorAll("#dropdownMenu a")
+
+navLinks.forEach((link) => {
+  link.children[0].children[1].classList.add("transation-all")
+  link.children[0].children[1].classList.add("duration-500")
+})
+
+mobileLinks.forEach((link) => {
+  link.children[0].children[1].classList.add("transation-all")
+  link.children[0].children[1].classList.add("duration-500")
+})
 const sections = document.querySelectorAll('section');
 window.onload= ()=>{
   addActiveClass('hero')
+  scrollTo(0,0)
 }
 
   // Function to remove active class from all links
@@ -64,20 +76,28 @@ window.onload= ()=>{
       linko.classList.remove("active");
       linko.children[0].children[1].classList.add("opacity-0")  
       linko.children[0].children[0].classList.remove("bg-[#f2f2f2]")
-      console.log(linko.children[0].children[0])
-      
-      
+    })
 
+    mobileLinks.forEach((linko) => {
+      linko.classList.remove("active");
+      linko.children[0].children[1].classList.add("opacity-0")  
+      linko.children[0].children[0].classList.remove("bg-[#f2f2f2]")
     })
   }
 
   // Function to add active class to the current section's link
   function addActiveClass(id) {
     const activeLink = document.querySelector(`nav div div ul a[href="#${id}"]`);
+    const activeMobile = document.querySelector(`#dropdownMenu ul a[href="#${id}"]`);
+    
     if (activeLink) {
-      
       activeLink.children[0].children[1].classList.remove("opacity-0")  
       activeLink.children[0].children[0].classList.add("bg-[#f2f2f2]")
+    }
+
+    if (activeMobile) {
+      activeMobile.children[0].children[1].classList.remove("opacity-0")  
+      activeMobile.children[0].children[0].classList.add("bg-[#f2f2f2]")
     }
   }
 
